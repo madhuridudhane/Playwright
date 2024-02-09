@@ -19,4 +19,5 @@ test("verify the login functionality with invalid credentials",async({page})=>{
      await page.locator('button[type="submit"]').click()
      await page.waitForTimeout(4000)
      await expect(page.locator('p[class="oxd-text oxd-text--p oxd-alert-content-text"]')).toBeVisible()
+     await expect(page.locator('p[class="oxd-text oxd-text--p oxd-alert-content-text"]')).toHaveText("Invalid credentials")
 })
