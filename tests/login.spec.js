@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test("verify the login functionality with valid credentials",async({page})=>{
+test("verify the login functionality with valid credentials", async ({ page }) => {
      await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
      await page.locator('input[name="username"]').fill('Admin')
      await page.locator('input[name="password"]').fill('admin123')
@@ -12,7 +12,7 @@ test("verify the login functionality with valid credentials",async({page})=>{
 
 })
 
-test("verify the login functionality with invalid credentials",async({page})=>{
+test("verify the login functionality with invalid credentials", async ({ page }) => {
      await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
      await page.locator('input[name="username"]').fill('Admin')
      await page.locator('input[name="password"]').fill('admin12')
