@@ -8,8 +8,8 @@ test('verify the Dynamic DropDown', async ({ page }) => {
      //console.log(option)
      // let text=await(await page.locator('.placeHolderMainText')).last().textContent()
      // console.log(text)
-     for (let i = 2; i < option; i++) {
-          let text = await page.locator('.placeHolderMainText').nth(2).textContent()
+     for (let i = 0; i < option; i++) {
+          let text = await page.locator('.placeHolderMainText').nth(i).textContent()
           console.log(text)
           if (text === 'Viman Nagar') {
                await page.locator('.placeHolderMainText').nth(i).click()
